@@ -8,8 +8,7 @@
   "project_page": "https://github.com/simp/pupmod-simp-site",
   "issues_url":   "https://simp-project.atlassian.net",
   "tags": [ "simp", "site", "profiles" ],
-  "dependencies": [
-  ],
+  "dependencies": [ ],
   "operatingsystem_support": [
     {
       "operatingsystem": "CentOS",
