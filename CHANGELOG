@@ -1,0 +1,28 @@
+* Mon May 25 2015 Trevor Vaughan <tvaughan@onyxpoint.com> - 2.0.0-3
+- Updates for public release
+
+* Fri Jan 16 2015 Trevor Vaughan <tvaughan@onyxpoint.com> - 2.0.0-2
+- Changed puppet-server requirement to puppet
+
+* Mon Dec 26 2011 Maintenance
+2.0.0-1
+- Updated the spec file to add in the 'lib' directory and set the directory
+  permissions more cleanly.
+
+* Tue Jan 11 2011 Maintenance
+2.0.0-0
+- Refactored for SIMP-2.0.0-alpha release
+
+* Fri Jun 11 2010 Maintenance
+1.0-0
+- Stub to go along with the new simp version jump.
+
+* Thu Feb 18 2010 Maintenance
+0.1-11
+- Updated the files list to explicitly name the user/group of the directories.
+  For some reaons, %defattr didn't seem to carry down to them properly.
+
+* Wed Dec 09 2009 Maintenance
+0.1-10
+- Forced permission and mode setting on the /etc/puppet/environments/simp/modules/site/files
+  directory.
