@@ -1,3 +1,7 @@
+* Mon Aug 15 2016 Nick Miller <nick.miller@onyxpoint.com> - 2.0.1-0
+- Moved to semantic versioning
+- Create skeleton folder structure
+
 * Mon May 25 2015 Trevor Vaughan <tvaughan@onyxpoint.com> - 2.0.0-3
 - Updates for public release
 
