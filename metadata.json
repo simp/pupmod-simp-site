@@ -1,14 +1,20 @@
 {
-  "name":    "simp-site",
-  "version": "2.0.1",
-  "author":  "simp",
+  "name": "simp-site",
+  "version": "2.0.2",
+  "author": "simp",
   "summary": "A skeleton profile module",
   "license": "Apache-2.0",
-  "source":  "https://github.com/simp/pupmod-simp-site",
+  "source": "https://github.com/simp/pupmod-simp-site",
   "project_page": "https://github.com/simp/pupmod-simp-site",
-  "issues_url":   "https://simp-project.atlassian.net",
-  "tags": [ "simp", "site", "profiles" ],
-  "dependencies": [ ],
+  "issues_url": "https://simp-project.atlassian.net",
+  "tags": [
+    "simp",
+    "site",
+    "profiles"
+  ],
+  "dependencies": [
+
+  ],
   "operatingsystem_support": [
     {
       "operatingsystem": "CentOS",
