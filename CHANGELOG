@@ -1,3 +1,6 @@
+* Mon Dec 19 2016 Nick Markowski <nmarkowski@keywcorp.com> - 2.0.2-0
+- Removed package metadata
+
 * Mon Aug 15 2016 Nick Miller <nick.miller@onyxpoint.com> - 2.0.1-0
 - Moved to semantic versioning
 - Create skeleton folder structure
