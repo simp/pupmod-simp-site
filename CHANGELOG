@@ -1,5 +1,11 @@
-* Mon Dec 19 2016 Nick Markowski <nmarkowski@keywcorp.com> - 2.0.2-0
+* Tue Feb 21 2017 Nick Miller <nick.miller@onyxpoint.com> - 2.0.3-0
+- Fix travis test
+
+* Mon Dec 19 2016 Nick Markowski <nmarkowski@keywcorp.com> - 2.0.3-0
 - Removed package metadata
+
+* Fri Nov 18 2016 Chris Tessmer <chris.tessmer@onyxpoint.com> - 2.0.2-0
+- Remove `compliance_markup` and provides general housekeeping 
 
 * Mon Aug 15 2016 Nick Miller <nick.miller@onyxpoint.com> - 2.0.1-0
 - Moved to semantic versioning
