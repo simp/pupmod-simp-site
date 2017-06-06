@@ -1,9 +1,33 @@
-# Note: There aren't any tests for simp-rsync right now.  However, this build
-# config has been provided as a placeholder (and reminded) to add them in the
-# future.
+# The testing matrix considers ruby/puppet versions supported by SIMP and PE:
+# ------------------------------------------------------------------------------
+#  release    pup   ruby      eol
+# PE 2016.4   4.7   2.1.9  TBD (LTS)
+# PE 2016.5   4.8   2.1.9  2017-10-31
+# SIMP6.0.0   4.8   2.1.9  TBD
+# PE 2017.1   4.9   2.1.9  2017-10-31
+# PE 2017.2   4.10  2.1.9  TBD
 ---
 language: ruby
 sudo: false
-rvm: 2.1.9
-install: gem list -i ruby_cowsay -q > /dev/null || gem install ruby_cowsay
-script: ruby  -r ruby_cowsay -e "puts Cow.new({ :cow => ['cow','vader','skeleton','ren','owl','www','turtle'].sample }).say('There are no tests yet, but there should be when you add manifests to this module!', 'think')"
+cache: bundler
+before_script:
+- bundle update
+bundler_args: "--without development system_tests"
+before_install: rm Gemfile.lock || true
+script:
+- bundle exec rake test
+notifications:
+  email: false
+rvm:
+- 2.1.9
+env:
+  global:
+  - STRICT_VARIABLES=yes
+  matrix:
+  - PUPPET_VERSION="~> 4.8.2"
+  - PUPPET_VERSION="~> 4.10.0"
+  - PUPPET_VERSION="~> 4.9.2"
+  - PUPPET_VERSION="~> 4.7.0"
+matrix:
+  fast_finish: true
+
