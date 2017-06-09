@@ -2,4 +2,3 @@
 fixtures:
   symlinks:
     site: "#{source_dir}"
-    stdlib: "#{source_dir}/../stdlib"
