@@ -1,3 +1,6 @@
+* Fri Jun 22 2018 Nick Miller <nick.miller@onyxpoint.com> - 2.0.5-0
+- Remove old rpm requires file and update CI assets
+
 * Thu Jun 08 2017 Nick Miller <nick.miller@onyxpoint.com> - 2.0.4-0
 - Update puppet requirement in metadata.json
 - Add empty spec test so travis will pass
