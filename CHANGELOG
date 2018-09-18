@@ -1,3 +1,6 @@
+* Thu Sep 13 2018 Nicholas Markowski <nicholas.markowski@onyxpoint.com> - 2.0.5-0
+- Added support for Puppet 5
+
 * Fri Jun 22 2018 Nick Miller <nick.miller@onyxpoint.com> - 2.0.5-0
 - Remove old rpm requires file and update CI assets
 
