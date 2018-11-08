@@ -1,3 +1,6 @@
+* Wed Nov 07 2018 Liz Nemsick <lnemsick.simp@gmail.com> - 2.0.5-0
+- Update badges and contribution guide URL in README.md
+
 * Thu Sep 13 2018 Nicholas Markowski <nicholas.markowski@onyxpoint.com> - 2.0.5-0
 - Added support for Puppet 5
 
