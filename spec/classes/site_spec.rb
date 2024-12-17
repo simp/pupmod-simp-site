@@ -11,7 +11,7 @@ EOF
 
 describe 'site' do
   context 'on supported operating systems' do
-    on_supported_os.each do |os, facts|
+    on_supported_os.each do |_os, _facts|
       context 'default params' do
         it { expect(true).to be_truthy }
       end
