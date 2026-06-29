@@ -1,12 +1,12 @@
 {
   "name": "simp-site",
-  "version": "2.2.0",
+  "version": "3.0.0",
   "author": "SIMP Team",
   "summary": "A skeleton profile module",
   "license": "Apache-2.0",
   "source": "https://github.com/simp/pupmod-simp-site",
   "project_page": "https://github.com/simp/pupmod-simp-site",
-  "issues_url": "https://simp-project.atlassian.net",
+  "issues_url": "https://github.com/simp/pupmod-simp-site/issues",
   "tags": [
     "simp",
     "site",
@@ -15,7 +15,7 @@
   "dependencies": [
     {
       "name": "simp/simplib",
-      "version_requirement": ">= 4.9.0 < 5.0.0"
+      "version_requirement": ">= 4.9.0 < 6.0.0"
     },
     {
       "name": "puppetlabs/stdlib",
@@ -26,29 +26,47 @@
     {
       "operatingsystem": "CentOS",
       "operatingsystemrelease": [
-        "6",
-        "7"
+        "9",
+        "10"
       ]
     },
     {
       "operatingsystem": "RedHat",
       "operatingsystemrelease": [
-        "6",
-        "7"
+        "8",
+        "9",
+        "10"
       ]
     },
     {
       "operatingsystem": "OracleLinux",
       "operatingsystemrelease": [
-        "6",
-        "7"
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "operatingsystem": "Rocky",
+      "operatingsystemrelease": [
+        "8",
+        "9",
+        "10"
+      ]
+    },
+    {
+      "operatingsystem": "AlmaLinux",
+      "operatingsystemrelease": [
+        "8",
+        "9",
+        "10"
       ]
     }
   ],
   "requirements": [
     {
-      "name": "puppet",
-      "version_requirement": ">= 7.0.0 < 9.0.0"
+      "name": "openvox",
+      "version_requirement": ">= 8.0.0 < 9.0.0"
     }
   ]
 }
