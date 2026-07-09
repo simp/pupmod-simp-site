@@ -7,7 +7,7 @@ This file provides guidance to AI agents when working with code in this reposito
 `simp-site` is a **deliberately empty** SIMP Puppet module. It ships no classes,
 defines, functions, types, facts, or templates — the README says so on its own
 line: "This module is empty on purpose, and is intended to contain site-specific
-classes." (`README.md:20`).
+classes." (`README.md`).
 
 Its purpose is to give a SIMP deployment a **blessed, pre-created home for
 site-local Puppet code**. SIMP ships `simp-site` so that site-specific classes
@@ -38,18 +38,18 @@ ready for the moment someone drops a class into `manifests/`.
   route toggles through. `simp/simplib` is a declared dependency for consistency
   and future use, not because anything calls it yet.
 - **The supported-OS matrix in `metadata.json` is stale.** It lists only
-  CentOS 6/7, RedHat 6/7, and OracleLinux 6/7 (`metadata.json:33-56`) — there is
+  CentOS 6/7, RedHat 6/7, and OracleLinux 6/7 (`metadata.json`) — there is
   no EL8/9/10 entry. This is genuinely old baseline metadata; do not treat the
   EL6/7 list as a current statement of support. If you add code with real OS
   constraints, refresh this matrix.
 - **The Puppet requirement is an old baseline too.** `puppet >= 7.0.0 < 9.0.0`
-  (`metadata.json:60-64`) and the `Gemfile` default `['>= 7', '< 9']`
-  (`Gemfile:23`) predate SIMP's Puppet → OpenVox migration. When the baseline
+  (`metadata.json`) and the `Gemfile` default `['>= 7', '< 9']`
+  (`Gemfile`) predate SIMP's Puppet → OpenVox migration. When the baseline
   moves this module to `openvox`, update these to match.
 
 ## Dependencies
 
-Module dependencies (from `metadata.json:12-23`):
+Module dependencies (from `metadata.json`):
 
 - `simp/simplib` `>= 4.9.0 < 5.0.0` — declared for consistency with the SIMP
   module family; nothing in this (empty) module calls it yet.
@@ -58,11 +58,11 @@ Module dependencies (from `metadata.json:12-23`):
 There are **no optional dependencies** (no `simp.optional_dependencies` block in
 `metadata.json`).
 
-Runtime requirement (from `metadata.json:57-64`): `puppet >= 7.0.0 < 9.0.0`.
+Runtime requirement (from `metadata.json`): `puppet >= 7.0.0 < 9.0.0`.
 This is an old baseline; SIMP is migrating Puppet → OpenVox, so when
 `metadata.json` switches this to `openvox`, update this line to match.
 
-Supported OS matrix (from `metadata.json:24-56`): CentOS 6/7; RedHat 6/7;
+Supported OS matrix (from `metadata.json`): CentOS 6/7; RedHat 6/7;
 OracleLinux 6/7 — stale (see gotchas above).
 
 ## Repository layout
@@ -73,11 +73,11 @@ OracleLinux 6/7 — stale (see gotchas above).
 - `metadata.json` — name (`simp-site`), version (`2.2.0`), dependencies, the
   (stale) OS matrix, and the Puppet requirement.
 - `README.md` — SIMP boilerplate plus the "empty on purpose" statement
-  (`README.md:20`).
+  (`README.md`).
 - `spec/classes/site_spec.rb` — placeholder unit test (ASCII whale +
   `expect(true).to be_truthy`); not a real behavioral test.
 - `spec/spec_helper.rb` — standard SIMP rspec harness; requires
-  `puppetlabs_spec_helper/module_spec_helper` (`spec/spec_helper.rb:11`).
+  `puppetlabs_spec_helper/module_spec_helper` (`spec/spec_helper.rb`).
   Carries a **puppetsync** notice (baseline-managed).
 - `Gemfile` — baseline-managed gem pins; also carries a **puppetsync** notice.
 - `.github/workflows/pr_tests.yml` — CI (see below).
@@ -106,12 +106,12 @@ bundle exec rake lint
 bundle exec rake rubocop
 ```
 
-Relevant gem pins (from `Gemfile`): `rubocop ~> 1.88.0` (`Gemfile:16`),
-`puppetlabs_spec_helper ~> 8.0.0` (`Gemfile:30`), `simp-rake-helpers ~> 5.24.0`
-(`Gemfile:36`), `simp-beaker-helpers ~> 2.0.0` (`Gemfile:52`). The only Puppet
+Relevant gem pins (from `Gemfile`): `rubocop ~> 1.88.0` (`Gemfile`),
+`puppetlabs_spec_helper ~> 8.0.0` (`Gemfile`), `simp-rake-helpers ~> 5.24.0`
+(`Gemfile`), `simp-beaker-helpers ~> 2.0.0` (`Gemfile`). The only Puppet
 implementation gem pulled in is the **`puppet` gem** via
-`gem 'puppet', puppet_version` (`Gemfile:29`), with `puppet_version` defaulting
-to `['>= 7', '< 9']` (`Gemfile:23`).
+`gem 'puppet', puppet_version` (`Gemfile`), with `puppet_version` defaulting
+to `['>= 7', '< 9']` (`Gemfile`).
 
 ## Conventions
 
